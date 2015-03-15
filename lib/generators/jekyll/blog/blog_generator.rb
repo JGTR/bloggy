@@ -16,7 +16,7 @@ class Jekyll::BlogGenerator < Rails::Generators::NamedBase
         copy_file 'tasks/gen.rake.tt', 'lib/tasks/gen.rake'
     end
 
-    def create_blog source = 'config/jekyll', destination = File.join('public',"#{name}")
+    def create_blog source = 'config/jekyll', destination = File.join('app/views',"#{name}")
         options = {
             'source' => source,
             'destination' => destination
